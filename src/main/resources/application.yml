@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_daniel?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Guayaquil
+    username: root
+    password: 1234
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+
+cloud:
+  aws:
+    region: 
+      static: us-east-1
+    stack:
+      auto: false
+    credentials:
+      access-key: AKIA5XJ4TCMGJ4W2LB45
+      secret-key: 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
+
+
+logging:
+  level:
+    '[com.amazonaws.internal.InstanceMetadataServiceResourceFetcher]': error
+    '[com.amazonaws.util.EC2MetadataUtils]': error
